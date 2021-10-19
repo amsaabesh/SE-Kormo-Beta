@@ -8,10 +8,9 @@ using System.Data;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 
-
 namespace KOrmo0._0
 {
-    public partial class LoginPage : System.Web.UI.Page
+    public partial class Registration : System.Web.UI.Page
     {
         MySqlConnection con;
         MySqlCommand cmd;
@@ -30,22 +29,23 @@ namespace KOrmo0._0
         }
             protected void Button1_Click(object sender, EventArgs e)
         {
-            TextBox2.Text = enc(TextBox2.Text);
-            str = "select * from user where Email=@email and Password=@password ";
-            cmd = new MySqlCommand(str, con);
-            cmd.Parameters.AddWithValue("@email", TextBox1.Text);
-            cmd.Parameters.AddWithValue("@password", TextBox2.Text);
-            sdr = cmd.ExecuteReader();
-            if (sdr.Read())
+            try
             {
-                Response.Redirect("Test.aspx");
+                pass.Text = enc(pass.Text);
+                str = "insert into user (Name,NID,MobileNumber,Password,Email,Address) values ('" + name.Text + "','" + nid.Text + "','" + mobile.Text + "','" + pass.Text + "','" + email.Text + "','" + address.Text + "')";
+                cmd = new MySqlCommand(str, con);
+                cmd.ExecuteNonQuery();
+                Label1.Visible = true;
             }
-            else
+            catch
             {
-                Label1.Text = "Username or Password Incorrect !!";
+                Label1.Text = "Wrong Input";
+                throw;
             }
-            con.Close();
-            
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

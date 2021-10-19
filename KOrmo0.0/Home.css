@@ -1,0 +1,14 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+section {
+    background-image: url("Images/bg11.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

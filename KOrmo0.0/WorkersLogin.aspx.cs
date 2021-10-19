@@ -8,10 +8,9 @@ using System.Data;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 
-
 namespace KOrmo0._0
 {
-    public partial class LoginPage : System.Web.UI.Page
+    public partial class WorkersLogin : System.Web.UI.Page
     {
         MySqlConnection con;
         MySqlCommand cmd;
@@ -22,16 +21,10 @@ namespace KOrmo0._0
             con = new MySqlConnection("Data Source=localhost;Database=kormo0.0;User ID=root;Password= ");
             con.Open();
         }
-        public string enc(string enpass)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            byte[] b = System.Text.ASCIIEncoding.ASCII.GetBytes(enpass);
-            string encrypt = Convert.ToBase64String(b);
-            return encrypt;
-        }
-            protected void Button1_Click(object sender, EventArgs e)
-        {
-            TextBox2.Text = enc(TextBox2.Text);
-            str = "select * from user where Email=@email and Password=@password ";
+            /*str = "insert into details values ('" + TextBox1.Text + "','" + TextBox2.Text + "')";*/
+            str = "select * from worker where Email=@email and Password=@password ";
             cmd = new MySqlCommand(str, con);
             cmd.Parameters.AddWithValue("@email", TextBox1.Text);
             cmd.Parameters.AddWithValue("@password", TextBox2.Text);
@@ -45,7 +38,7 @@ namespace KOrmo0._0
                 Label1.Text = "Username or Password Incorrect !!";
             }
             con.Close();
-            
+            //cmd.ExecuteNonQuery();
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿*{
+    margin:0;
+    padding:0;
+}
+section{
+    background-image:url('Images/bg8.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    width:47vw;
+    height:57vh;
+   background-image:url('Images/bg11.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:relative;
+}
+h3{
+    font-size:2.5vw;
+    font-family:'pacifico';
+    margin-bottom:13%;
+    margin-top:6%;
+}
