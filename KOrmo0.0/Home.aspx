@@ -34,9 +34,9 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style3">
-                        <asp:ImageButton ID="ImageButton1" href="Registration.aspx" runat="server" Height="250px" ImageUrl="~/Images/elect.jpg" Width="250px" />
+                        <asp:ImageButton ID="ImageButton1" href="Registration.aspx" runat="server" Height="250px" ImageUrl="~/Images/elect.jpg" Width="250px" OnClick="ImageButton1_Click" />
                         <br />
-                        <asp:LinkButton ID="LinkButton1" href="Registration.aspx" runat="server">Electrician</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" href="Test.html" runat="server" OnClick="LinkButton1_Click">Electrician</asp:LinkButton>
                         <br />
                     </td>
                     <td class="auto-style2">

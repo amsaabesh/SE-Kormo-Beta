@@ -25,14 +25,18 @@
                 </div>
 
                 <div class="auto-style1">
-                    <h2>User Login</h2>
+                    <h2>&nbsp;User Login</h2>
                     <asp:TextBox ID="TextBox1" placeholder="Enter Email" runat="server"></asp:TextBox><br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Font-Size="Medium" ForeColor="Black" Display="Dynamic" ControlToValidate="TextBox1" ErrorMessage="Please Enter Email."></asp:RequiredFieldValidator><br />
                     <asp:TextBox ID="TextBox2" placeholder="Password" TextMode="Password" runat="server"></asp:TextBox><br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Font-Size="Medium"  ForeColor="Black" Display="Dynamic" ControlToValidate="TextBox2"  ErrorMessage="Please Enter Password."></asp:RequiredFieldValidator><br />
-                    <asp:Button ID="Login" runat="server" onclick="Button1_Click" Text="Login" /><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button2" runat="server" OnClick="click" Text="SignIn" />
+                    <br />
                     <asp:Label ID="Label1" Style="padding-left:4vw;padding-top:2vw;" Font-Size="Medium" Forecolor="Red" runat="server" Text=""></asp:Label>
                     <li><a href ="Registration.aspx">Create Account</a></li>
+                    <li>
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" PostBackUrl="~/WorkersLogin.aspx">Go to worker login</asp:LinkButton>
+                    </li>
                 </div>
                </div> 
          </div>

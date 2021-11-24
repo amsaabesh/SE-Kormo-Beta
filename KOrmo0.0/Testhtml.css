@@ -1,0 +1,69 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("Images/hbg1.jpg");
+    background-size: cover;
+    background-position: inherit;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.menu-bar{
+    background: rgb(138,125,80);
+    text-align: center;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #000;
+}
+    .menu-bar ul li{
+        width:120px;
+        margin:15px;
+        padding: 10px;
+
+    }
+    .menu-bar ul li a{
+        text-decoration: none;
+        color: #000000;
+    }
+   .active, .menu-bar ul li:hover{
+       background: #d0be7b;
+       border-radius: 3px;
+   }
+   .sub-menu-1{
+       display: none;
+   }
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: rgb(138,125,80);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+    .menu-bar ul li:hover .sub-menu-1 ul{
+        display: block;
+        margin:10px;
+    }
+    .menu-bar ul li:hover .sub-menu-1 ul li {
+        width: 150px;
+        padding: 10px;
+        border-bottom: 1px dotted #000000;
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+    }
+        .menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+            border-bottom:none;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+            color:#d0b170;
+        }
+
+.about{
+    
+}

@@ -40,5 +40,10 @@ namespace KOrmo0._0
             con.Close();
             //cmd.ExecuteNonQuery();
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LoginPage.aspx");
+        }
     }
 }

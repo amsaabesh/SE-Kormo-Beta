@@ -13,5 +13,15 @@ namespace KOrmo0._0
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Test.html");
+        }
     }
 }

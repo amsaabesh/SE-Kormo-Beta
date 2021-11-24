@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+    <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Images/bg10.jpg">
     <form id="form1" runat="server">
         <section>
             <div class="container1">
@@ -28,5 +29,6 @@
             </div>
         </section>
     </form>
+        </asp:Panel>
 </body>
 </html>

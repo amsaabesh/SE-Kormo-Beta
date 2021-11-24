@@ -15,7 +15,7 @@ namespace KOrmo0._0
         MySqlConnection con;
         MySqlCommand cmd;
         MySqlDataReader sdr;
-        string str;
+        string str, ty;
         protected void Page_Load(object sender, EventArgs e)
         {
             con = new MySqlConnection("Data Source=localhost;Database=kormo0.0;User ID=root;Password= ");
@@ -41,5 +41,7 @@ namespace KOrmo0._0
                 con.Close();
             }
         }
+
+        
     }
 }

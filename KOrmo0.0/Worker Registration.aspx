@@ -18,6 +18,8 @@
             <div class="container">
                 <h3>Worker Registration</h3>
 
+                <br />
+
                 <asp:TextBox ID="name" placeholder="Name" runat="server"></asp:TextBox><br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Font-Size="Medium" ForeColor="Red" Display="Dynamic" ControlToValidate="name" ErrorMessage="Please Enter Username."></asp:RequiredFieldValidator><br />
 

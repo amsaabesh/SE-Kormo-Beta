@@ -1,0 +1,11 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://cdn.imgbin.com/18/13/13/imgbin-construction-worker-cartoon-man-with-a-board-WfMgK9fv95uJhjkUc0rwk9SKx.jpg');
+    background-size: cover;
+}
+.panel{
+    align-content:center;
+    padding-left:380px;
+    padding-top:130px;
+}
